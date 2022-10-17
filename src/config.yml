@@ -1,0 +1,49 @@
+#Allow the chat filter to block messages containing banned words in commands?
+block-commands: true
+
+#Banned words listed
+Swear-Words:
+  - "nigger"
+  - "sex"
+  - "nig"
+  - "fuck"
+  - "shit"
+  - "fag"
+  - "motherfucker"
+  - "vagina"
+  - "cock"
+  - "asshole"
+  - "bitch"
+  - "gay"
+  - "faggot"
+  - "pussy"
+  - "mfer"
+  - "porn"
+  - "fk"
+  - "cunt"
+  - "nigga"
+  - "stfu"
+
+#%word% gets the word a player tried to say
+#%message% gets the entire message sent by a player containing a banned word
+#%player% gets the players name
+
+#Message when someone swears
+message:
+  - '&cSwearing or using vulgar language is strictly prohibited on this server.&r &eAttempting to bypass this filter, will result in &c&lyour mute duration being doubled!'
+
+#If someone uses a word from the Swear-Words list, what should happen?
+kick-player: false
+kick-message: '&cDo not swear!'
+
+#Mute players when they swear?
+command-on-swear: true
+command: 'mute 5min %player% Offensive language'
+
+#Turn this on if you want people with chatfilter.notify to be alerted when a player swears
+staff-notify: true
+
+#The message staff with chatfilter.notify will receive when a player swears
+notify-message:
+  - '&4DinoChatFilter &8> &7%player% tried to say &c%word%'
+  - '&8> &c%message%'

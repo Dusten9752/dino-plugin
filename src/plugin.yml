@@ -1,0 +1,6 @@
+name: DinoChatFilter
+version: '${project.version}'
+main: src.main.core
+api-version: 1.19
+authors: [ Dino ]
+description: Custom chat filter to prevent swearing.
